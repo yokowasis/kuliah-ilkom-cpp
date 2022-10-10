@@ -8,36 +8,47 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     int a, b, s = 1, fpb;
     double h1;
 
-    a = 8;
-    b = 12;
-    
-    while (s>0) {
-        if (a > b) {
+    a = 85;
+    b = 15;
+
+    while (s > 0)
+    {
+        if (a > b)
+        {
             // a/b
-            h1 = a/b;
+            h1 = a / b;
             s = a % b;
-            if (s==0) {
+            if (s == 0)
+            {
                 fpb = b;
-            } else {
-                a = s;                
-            }            
-        } else {
+            }
+            else
+            {
+                a = s;
+            }
+        }
+        else
+        {
             // b/a
-            h1 = b/a;
+            h1 = b / a;
             s = b % a;
-            if (s==0) {
+            if (s == 0)
+            {
                 fpb = a;
-            } else {
-                b = s;                
-            }            
+            }
+            else
+            {
+                b = s;
+            }
         };
     }
 
     cout << fpb << endl;
-    
+
     return 0;
 }
