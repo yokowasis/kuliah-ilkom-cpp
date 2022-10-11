@@ -14,5 +14,9 @@ int main()
         cout << endl;
     }
 
+    cout << "Hello World";
+    // mantap juga ternyata menggunakan ini
+    // c++ menggunakan vs code menggunakan hp
+
     return 0;
 }
