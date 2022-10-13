@@ -2,7 +2,11 @@
 using namespace std;
 
 int main() {
-    string nama = "yokowasis";
-    cout << "Hello World " << nama << " " << endl;
+
+    int a,b;
+    a = 20;
+    b = 30;
+    cout << "Hello World" << endl;
+    cout << "Hasil Kali 20 dan 30 adalah " << a * b << endl;
     return 0;
 }
