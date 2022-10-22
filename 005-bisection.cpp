@@ -6,6 +6,8 @@ double f(double x) {
 
   double a,b,c;
 
+  //2x^ + 3x - 4 = 0
+
   a = 2;
   b = 3;
   c = -4;
