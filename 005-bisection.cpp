@@ -15,6 +15,20 @@ double f(double x) {
   return (a*x*x + b*x + c);
 }
 
+int echo(double a, double b, double c, int i) {
+  cout 
+    << i << " : " 
+    << a << " : " 
+    << b << " : " 
+    << c << " : " 
+    << f(a) << " : " 
+    << f(b) << " : " 
+    << f(c) << " : "
+    << endl;
+
+  return 0;
+}
+
 int main() {
   double a,b,c,toleransi, selisih;
 
@@ -30,6 +44,7 @@ int main() {
 
   cout << fixed;
   cout << setprecision(8);
+  echo (a,b,c,i);
 
   while (selisih > toleransi) {
     i++;
@@ -42,10 +57,11 @@ int main() {
       c = (a+b)/2;
       selisih = abs(c-a);
     }
+    echo (a,b,c,i);
     /* cout << "Selisih : " << selisih << endl; */
   }
 
-  cout <<  "Iterasi : " << i << endl; 
+  cout <<  endl << "Iterasi : " << i << endl; 
   cout << "F(" << c << ") = " << f(c) << endl;
 
   return 0;
