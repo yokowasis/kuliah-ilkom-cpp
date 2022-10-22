@@ -10,14 +10,17 @@ double f(double x) {
   return a*x*x + b*x + c;
 }
 
-int iterasi(double a, double penambah) {
-  for (int i = 1; i<=10 ; i++) {
-    cout << i << " : " << a << " : " << f(a) << endl;
-    if ((f(a) * f(a+penambah) <0)) {
-      cout << i << "----------" << endl;
-      iterasi(a, penambah/10);
-    }
+int iterasi(double a, double penambah, double toleransi) {
+  cout << "---------------" << endl;
+  do {
     a = a + penambah;
+    cout << a << " : " << f(a) << endl;
+  } while ((f(a) * f(a+penambah)) > 0);
+
+  if (abs(f(a)) <= toleransi) {
+    return 0;
+  } else {
+    iterasi(a, penambah/10, toleransi);
   }
 
   return 0;
@@ -34,7 +37,7 @@ int main () {
   cout << fixed;
   cout << setprecision(8);
 
-  iterasi(a, 1);
+  iterasi(a, 1, toleransi);
         
   return 0;
 }
