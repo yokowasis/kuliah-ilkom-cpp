@@ -14,30 +14,37 @@ double f(double x) {
 }
 
 int main() {
-  double x1,x2,x3,toleransi;
+  double a,b,c,toleransi, selisih;
 
   //bisection method
   
-  x1 = -3;
-  x2 = -2;
-  x3 = (x1+x2)/2;
-  toleransi = 0.00001;
+  a = -3; //batas bawah
+  b = -2; //batas atah
+  c = (a+b)/2;
+  toleransi = 0.0001;
+  selisih = 1;
 
-  int i = 0;
-  while (abs(f(x3)) >= toleransi) {
-    i++;
-    if (f(x1)*f(x3) < 0) {
-      x2 = x3;
-    } else {
-      x1 = x3;
-    }
-    x3 = (x1+x2)/2;
-  }
+  int i = 1;
 
   cout << fixed;
   cout << setprecision(8);
+
+  while (selisih > toleransi) {
+    i++;
+    if (f(a)*f(c) < 0) {
+      b = c;
+      c = (a+b)/2;
+      selisih = abs(c-b);
+    } else {
+      a = c;
+      c = (a+b)/2;
+      selisih = abs(c-a);
+    }
+    /* cout << "Selisih : " << selisih << endl; */
+  }
+
   cout <<  "Iterasi : " << i << endl; 
-  cout << "F(" << x3 << ") = " << f(x3) << endl;
+  cout << "F(" << c << ") = " << f(c) << endl;
 
   return 0;
 }
