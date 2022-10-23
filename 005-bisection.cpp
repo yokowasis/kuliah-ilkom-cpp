@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <math.h>
 using namespace std;
 
 double f(double x) {
@@ -51,11 +52,11 @@ int main() {
     if (f(a)*f(c) < 0) {
       b = c;
       c = (a+b)/2;
-      selisih = abs(c-b);
+      selisih = fabs(c-b);
     } else {
       a = c;
       c = (a+b)/2;
-      selisih = abs(c-a);
+      selisih = fabs(c-a);
     }
     echo (a,b,c,i);
     /* cout << "Selisih : " << selisih << endl; */
