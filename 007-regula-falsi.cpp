@@ -10,8 +10,8 @@ double f(double x) {
   //2x^ + 3x - 4 = 0
 
   a = 2;
-  b = -3;
-  c = -5;
+  b = 3;
+  c = -4;
 
   return (a*x*x + b*x + c);
 }
@@ -36,7 +36,7 @@ int main() {
   //bisection method
   
   a = -4; //batas bawah
-  b = -0; //batas atah
+  b = 1; //batas atah
   c = b - (f(b)*(b-a))/(f(b)-f(a));
   toleransi = 0.0001;
   selisih = 1;
