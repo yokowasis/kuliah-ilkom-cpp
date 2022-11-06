@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-  int x = 10;
+  int x = 12;
 
   /* cek apakah bilangan tersebut kelipatan 6 */ 
   if (x % 6 == 0) {
