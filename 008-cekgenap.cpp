@@ -4,11 +4,11 @@ using namespace std;
 
 int main() {
   int x;
-  x = 23;
+  cin >> x;
+
   if (x % 2 == 0) {
     cout << "X adalah bilangan genap";
-  } else {
-    cout << "X adalah bilangan ganjil";
   }
+
   return 0;
 }
