@@ -2,15 +2,20 @@
 #include <iomanip>
 using namespace std;
 
+
+/* Soal */
+/* Tulislah algoritma yang membaca tiga buah bilangan bulat, lalu  
+ * mengurutkan tiga buah bilangan tersebut dari nilai yang terbesar ke nilai yang  terkecil. 
+ * Keluaran adalah tiga buah bilangan yang terurut. */
+
+
 int main() {
 
-  /* array of integer */
   int arr[3];
 
-  // input 3 buah bilangan
-  arr[0] = 26;
-  arr[1] = 16;
-  arr[2] = 52;
+  cout << "Masukkan 3 buah bilangan, pisahkan dengan spasi" << endl;
+
+  cin >> arr[0] >> arr[1] >> arr[2];
 
   if (arr[0] < arr[1] && arr[0] < arr[2]) {
     cout << " " << arr[0];

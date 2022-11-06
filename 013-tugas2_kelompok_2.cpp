@@ -2,11 +2,19 @@
 #include <iomanip>
 using namespace std;
 
+/* Soal : */
+/* Pasar Swalayan X memberikan diskon harga bagi pembeli yang  nilai total */ 
+/* belanjanya lebih dari Rp150.000. Tulislah algoritma untuk  menentukan */ 
+/* nilai belanja setelah dikurangi diskon. Data masukan adalah */  
+/* nilai total belanja pembeli, sedangkan keluarannya adalah diskon harga */  
+/* dan nilai belanja setelah dikurangi diskon. (Diskon diketahui 20%) */
+
 int main() {
-  int totalbelanja = 180000;
+  int totalbelanja;
   float diskon = 20.0/100.0;
+
+  cin >> totalbelanja;
                          
-  /* jika totalbelanja lebih dari 150000 maka mendapatkan diskon 20% */
   if (totalbelanja > 150000) {
     cout << "Total belanja: " << totalbelanja << endl;
     cout << "Diskon: " << totalbelanja * diskon << endl;

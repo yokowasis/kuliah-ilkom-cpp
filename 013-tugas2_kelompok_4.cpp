@@ -2,14 +2,19 @@
 #include <iomanip>
 using namespace std;
 
+/* Soal : */
+/* Tulislah algoritma yang membaca panjang (integer) tiga buah sisi  sebuah segitiga, 
+ * a, b, dan c, yang dalam hal ini a ≤ b ≤ c, lalu menentukan  apakah ketiga 
+ * sisi tersebut membentuk segitiga siku-siku, segitiga lancip, 
+ * atau  segitiga tumpul (Petunjuk: gunakan hukum Phytagoras). */
+
 int main() {
   
-  //input 3 sisi segitiga a <= b <= c
-
   int a, b, c;
-  a = 3;
-  b = 4;
-  c = 5;
+
+  cout << "Masukkan panjang 3 sisi segitiga, pisahkan dengan spasi : " << endl;
+
+  cin >> a >> b >> c;
 
   //output apakah segitiga siku siku
 
