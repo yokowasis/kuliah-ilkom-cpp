@@ -12,7 +12,7 @@ int main() {
   cin >> r;
 
   L = 22.0 / 7.0 * r * r;
-  cout << "Luas Lingkarang : " << L << endl;
+  cout << "Luas Lingkaran : " << L << endl;
 
   return 0;
 }

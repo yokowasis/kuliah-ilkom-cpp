@@ -17,30 +17,34 @@ int main() {
 
   cin >> arr[0] >> arr[1] >> arr[2];
 
-  if (arr[0] < arr[1] && arr[0] < arr[2]) {
-    cout << " " << arr[0];
-    if (arr[1] < arr[2]) {
-      cout << " " << arr[1] << " " << arr[2];
+  if (arr[2] >= arr[1] && arr[2] >= arr[0]) {
+    cout << arr[2] << endl;
+    if (arr[1] > arr[0]) {
+      cout << arr[1] << endl;
+      cout << arr[0] << endl;
     } else {
-      cout << " " << arr[2] << " " << arr[1];
+      cout << arr[0] << endl;
+      cout << arr[1] << endl;
     }
-  }   
-
-  if (arr[1] < arr[0] && arr[1] < arr[2]) {
-    cout << " " << arr[1];
-    if (arr[0] < arr[2]) {
-      cout << " " << arr[0] << " " << arr[2];
+  } else
+  if (arr[1] > arr[0] && arr[1] > arr[2] ) {
+    cout << arr[1] << endl;
+    if (arr[2] > arr[0]) {
+      cout << arr[2] << endl;
+      cout << arr[0] << endl;
     } else {
-      cout << " " << arr[2] << " " << arr[0];
+      cout << arr[0] << endl;
+      cout << arr[2] << endl;
     }
-  }
-
-  if (arr[2] < arr[0] && arr[2] < arr[1]) {
-    cout << " " << arr[2];
-    if (arr[0] < arr[1]) {
-      cout << " " << arr[0] << " " << arr[1];
+  } else
+  if (arr[0] > arr[1] && arr[0] > arr[2] ) {
+    cout << arr[0] << endl;
+    if (arr[1] > arr[2]) {
+      cout << arr[1] << endl;
+      cout << arr[2] << endl;
     } else {
-      cout << " " << arr[1] << " " << arr[0];
+      cout << arr[2] << endl;
+      cout << arr[1] << endl;
     }
   }
 
